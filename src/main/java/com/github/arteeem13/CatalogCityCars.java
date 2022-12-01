@@ -3,10 +3,6 @@ package com.github.arteeem13;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import static com.github.arteeem13.Message.showMessageBye;
-import static com.github.arteeem13.Message.showMessageError;
-import static com.github.arteeem13.ManageCarsCatalog.manageCarsCatalog;
-
 public class CatalogCityCars {
 
     protected static HashMap<Integer, String> modelCityCar = new HashMap<>();
@@ -48,11 +44,11 @@ public class CatalogCityCars {
         if (command > 0 && command < CatalogCityCars.modelCityCar.size() + 1)
             Message.showMessageCityCars(command - 1);
         else if (command == 9)
-            manageCarsCatalog();
+            ManageCarsCatalog.manageCarsCatalog();
         else if (command == 0)
-            showMessageBye();
+            Message.showMessageBye();
         else
-            showMessageError();
+            Message.showMessageError();
     }
 
     public static void addNewCityCar() {
@@ -71,6 +67,6 @@ public class CatalogCityCars {
         capacityCityCar.put(capacityCityCar.size(), capacity);
 
         System.out.println("Городской автомобиль успешно добавлен!");
-        manageCarsCatalog();
+        ManageCarsCatalog.manageCarsCatalog();
     }
 }

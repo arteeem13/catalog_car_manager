@@ -10,6 +10,7 @@ import static com.github.arteeem13.CatalogRacingCars.getRacingCarsCatalog;
 import static com.github.arteeem13.Message.showMessageBye;
 import static com.github.arteeem13.Message.showMessageError;
 
+
 public class ManageCarsCatalog {
 
     public static void manageCarsCatalog() {

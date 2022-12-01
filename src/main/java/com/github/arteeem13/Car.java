@@ -1,5 +1,6 @@
 package com.github.arteeem13;
 
+
 public class Car {
 
     private String model;

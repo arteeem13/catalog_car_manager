@@ -3,9 +3,6 @@ package com.github.arteeem13;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import static com.github.arteeem13.Message.showMessageBye;
-import static com.github.arteeem13.Message.showMessageError;
-import static com.github.arteeem13.ManageCarsCatalog.manageCarsCatalog;
 
 public class CatalogRacingCars {
 
@@ -48,11 +45,11 @@ public class CatalogRacingCars {
         if (command > 0 && command < CatalogRacingCars.modelRacingCar.size() + 1)
             Message.showMessageRacingCars(command - 1);
         else if (command == 9)
-            manageCarsCatalog();
+            ManageCarsCatalog.manageCarsCatalog();
         else if (command == 0)
-            showMessageBye();
+            Message.showMessageBye();
         else
-            showMessageError();
+            Message.showMessageError();
     }
 
     public static void addNewRacingCar() {
@@ -72,6 +69,6 @@ public class CatalogRacingCars {
 
         System.out.println("Спортивный автомобиль успешно добавлен!");
 
-        manageCarsCatalog();
+        ManageCarsCatalog.manageCarsCatalog();
     }
 }
