@@ -1,12 +1,17 @@
 package com.andreev;
 
 
+import static com.andreev.CatalogCityCars.*;
+import static com.andreev.CatalogRacingCars.*;
+import static com.andreev.ManageCarsCatalog.*;
+import static com.andreev.Message.*;
+
 public class CarsManagement {
 
     public static void main(String[] args) {
-        Message.showMessageHello();
-        CatalogRacingCars.initRacingCarsCatalog();
-        CatalogCityCars.initCityCarsCatalog();
-        ManageCarsCatalog.manageCarsCatalog();
+        showMessageHello();
+        initRacingCarsCatalog();
+        initCityCarsCatalog();
+        manageCarsCatalog();
     }
 }

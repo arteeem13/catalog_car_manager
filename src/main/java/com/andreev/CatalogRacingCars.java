@@ -3,6 +3,9 @@ package com.andreev;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import static com.andreev.ManageCarsCatalog.*;
+import static com.andreev.Message.*;
+
 
 public class CatalogRacingCars {
 
@@ -11,21 +14,17 @@ public class CatalogRacingCars {
     protected static HashMap<Integer, Double> maxSpeedRacingCar = new HashMap<>();
 
     public static void initRacingCarsCatalog() {
-        RacingCar racingCarBMW = new RacingCar("BMW", 100000, 300);
-        RacingCar racingCarToyota = new RacingCar("Toyota", 200000, 250);
-        RacingCar racingCarFerrari = new RacingCar("Ferrari", 500000, 400);
+        modelRacingCar.put(0, "BMW");
+        priceRacingCar.put(0, 20000.0);
+        maxSpeedRacingCar.put(0, 300.0);
 
-        modelRacingCar.put(0, racingCarBMW.getModel());
-        priceRacingCar.put(0, racingCarBMW.getPrice());
-        maxSpeedRacingCar.put(0, racingCarBMW.getMaxSpeed());
+        modelRacingCar.put(1, "Toyota");
+        priceRacingCar.put(1, 18000.5);
+        maxSpeedRacingCar.put(1, 250.0);
 
-        modelRacingCar.put(1, racingCarToyota.getModel());
-        priceRacingCar.put(1, racingCarToyota.getPrice());
-        maxSpeedRacingCar.put(1, racingCarToyota.getMaxSpeed());
-
-        modelRacingCar.put(2, racingCarFerrari.getModel());
-        priceRacingCar.put(2, racingCarFerrari.getPrice());
-        maxSpeedRacingCar.put(2, racingCarFerrari.getMaxSpeed());
+        modelRacingCar.put(2, "Ferrari");
+        priceRacingCar.put(2, 100000.0);
+        maxSpeedRacingCar.put(2, 400.0);
     }
 
     public static void getRacingCarsCatalog() {
@@ -43,13 +42,13 @@ public class CatalogRacingCars {
         int command = new Scanner(System.in).nextInt();
 
         if (command > 0 && command < CatalogRacingCars.modelRacingCar.size() + 1)
-            Message.showMessageRacingCars(command - 1);
+            showMessageRacingCars(command - 1);
         else if (command == 9)
-            ManageCarsCatalog.manageCarsCatalog();
+            manageCarsCatalog();
         else if (command == 0)
-            Message.showMessageBye();
+            showMessageBye();
         else
-            Message.showMessageError();
+            showMessageError();
     }
 
     public static void addNewRacingCar() {
@@ -69,6 +68,6 @@ public class CatalogRacingCars {
 
         System.out.println("Спортивный автомобиль успешно добавлен!");
 
-        ManageCarsCatalog.manageCarsCatalog();
+        manageCarsCatalog();
     }
 }

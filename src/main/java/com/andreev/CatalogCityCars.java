@@ -3,6 +3,9 @@ package com.andreev;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import static com.andreev.ManageCarsCatalog.*;
+import static com.andreev.Message.*;
+
 public class CatalogCityCars {
 
     protected static HashMap<Integer, String> modelCityCar = new HashMap<>();
@@ -10,21 +13,17 @@ public class CatalogCityCars {
     protected static HashMap<Integer, Integer> capacityCityCar = new HashMap<>();
 
     public static void initCityCarsCatalog() {
-        CityCar cityCarReno = new CityCar("Reno", 50000, 4);
-        CityCar cityCarLada = new CityCar("Lada", 20000, 4);
-        CityCar cityCarSUV = new CityCar("SUV", 500000, 8);
+        modelCityCar.put(0, "Reno");
+        priceCityCar.put(0, 15050.0);
+        capacityCityCar.put(0, 4);
 
-        modelCityCar.put(0, cityCarReno.getModel());
-        priceCityCar.put(0, cityCarReno.getPrice());
-        capacityCityCar.put(0, cityCarReno.getCapacity());
+        modelCityCar.put(1, "Lada");
+        priceCityCar.put(1, 8000.7);
+        capacityCityCar.put(1, 4);
 
-        modelCityCar.put(1, cityCarLada.getModel());
-        priceCityCar.put(1, cityCarLada.getPrice());
-        capacityCityCar.put(1, cityCarLada.getCapacity());
-
-        modelCityCar.put(2, cityCarSUV.getModel());
-        priceCityCar.put(2, cityCarSUV.getPrice());
-        capacityCityCar.put(2, cityCarSUV.getCapacity());
+        modelCityCar.put(2, "SUV");
+        priceCityCar.put(2, 16000.0);
+        capacityCityCar.put(2, 8);
     }
 
     public static void getCityCarsCatalog() {
@@ -42,13 +41,13 @@ public class CatalogCityCars {
         int command = new Scanner(System.in).nextInt();
 
         if (command > 0 && command < CatalogCityCars.modelCityCar.size() + 1)
-            Message.showMessageCityCars(command - 1);
+            showMessageCityCars(command - 1);
         else if (command == 9)
-            ManageCarsCatalog.manageCarsCatalog();
+            manageCarsCatalog();
         else if (command == 0)
-            Message.showMessageBye();
+            showMessageBye();
         else
-            Message.showMessageError();
+            showMessageError();
     }
 
     public static void addNewCityCar() {
@@ -67,6 +66,6 @@ public class CatalogCityCars {
         capacityCityCar.put(capacityCityCar.size(), capacity);
 
         System.out.println("Городской автомобиль успешно добавлен!");
-        ManageCarsCatalog.manageCarsCatalog();
+        manageCarsCatalog();
     }
 }
