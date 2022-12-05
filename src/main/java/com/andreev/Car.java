@@ -1,12 +1,21 @@
 package com.andreev;
 
 
-public abstract class Car {
+public class Car {
 
-    public Car() {
+    private String model;
+    private double price;
+
+    public Car(String model, int price) {
+        this.model = model;
+        this.price = price;
     }
 
-    public abstract String getModel();
+    public String getModel() {
+        return model;
+    }
 
-    public abstract double getPrice();
+    public double getPrice() {
+        return price;
+    }
 }

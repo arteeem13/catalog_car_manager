@@ -1,9 +1,6 @@
 package com.andreev;
 
 
-import static com.andreev.CatalogCityCars.*;
-import static com.andreev.ManageCarsCatalog.*;
-
 public class Message extends CatalogRacingCars {
 
     public static void showMessageRacingCars(int commandRacingCarsCatalog) {
@@ -14,10 +11,10 @@ public class Message extends CatalogRacingCars {
         }
 
     public static void showMessageCityCars(int commandCityCarsCatalog) {
-        System.out.println(modelCityCar.get(commandCityCarsCatalog) + " за "
-                + priceCityCar.get(commandCityCarsCatalog) + "$ - отличный выбор!");
+        System.out.println(CatalogCityCars.modelCityCar.get(commandCityCarsCatalog) + " за "
+                + CatalogCityCars.priceCityCar.get(commandCityCarsCatalog) + "$ - отличный выбор!");
         System.out.println("Максимальная вместимость данного авто "
-                + capacityCityCar.get(commandCityCarsCatalog) + " человек!");
+                + CatalogCityCars.capacityCityCar.get(commandCityCarsCatalog) + " человек!");
     }
 
     public static void showMessageHello() {
@@ -27,10 +24,11 @@ public class Message extends CatalogRacingCars {
 
     public static void showMessageBye() {
         System.out.println("Пока! Будем рады видеть Вас снова!");
+        return;
     }
 
     public static void showMessageError() {
         System.out.println("Ошибка! Неверная команда!");
-        manageCarsCatalog();
+        ManageCarsCatalog.manageCarsCatalog();
     }
     }

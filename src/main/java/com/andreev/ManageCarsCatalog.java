@@ -3,8 +3,6 @@ package com.andreev;
 import java.util.Scanner;
 
 import static com.andreev.AppMenu.*;
-import static com.andreev.CatalogCityCars.*;
-import static com.andreev.CatalogRacingCars.*;
 import static com.andreev.Message.showMessageBye;
 import static com.andreev.Message.showMessageError;
 
@@ -20,10 +18,10 @@ public class ManageCarsCatalog {
 
             switch (commandCarType) {
                 case 1:
-                    getRacingCarsCatalog();
+                    CatalogRacingCars.getRacingCarsCatalog();
                     break;
                 case 2:
-                    getCityCarsCatalog();
+                    CatalogCityCars.getCityCarsCatalog();
                     break;
                 case 9:
                     manageCarsCatalog();
@@ -41,10 +39,10 @@ public class ManageCarsCatalog {
 
             switch (commandNewCarType) {
                 case 1:
-                    addNewRacingCar();
+                    CatalogRacingCars.addNewRacingCar();
                     break;
                 case 2:
-                    addNewCityCar();
+                    CatalogCityCars.addNewCityCar();
                     break;
                 case 9:
                     manageCarsCatalog();
