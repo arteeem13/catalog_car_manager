@@ -1,4 +1,4 @@
-package com.github.arteeem13;
+package com.andreev;
 
 public class AppMenu {
 

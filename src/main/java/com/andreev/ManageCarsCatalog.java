@@ -1,14 +1,10 @@
-package com.github.arteeem13;
+package com.andreev;
 
 import java.util.Scanner;
 
-import static com.github.arteeem13.AppMenu.*;
-import static com.github.arteeem13.CatalogCityCars.addNewCityCar;
-import static com.github.arteeem13.CatalogCityCars.getCityCarsCatalog;
-import static com.github.arteeem13.CatalogRacingCars.addNewRacingCar;
-import static com.github.arteeem13.CatalogRacingCars.getRacingCarsCatalog;
-import static com.github.arteeem13.Message.showMessageBye;
-import static com.github.arteeem13.Message.showMessageError;
+import static com.andreev.AppMenu.*;
+import static com.andreev.Message.showMessageBye;
+import static com.andreev.Message.showMessageError;
 
 
 public class ManageCarsCatalog {
@@ -22,10 +18,10 @@ public class ManageCarsCatalog {
 
             switch (commandCarType) {
                 case 1:
-                    getRacingCarsCatalog();
+                    CatalogRacingCars.getRacingCarsCatalog();
                     break;
                 case 2:
-                    getCityCarsCatalog();
+                    CatalogCityCars.getCityCarsCatalog();
                     break;
                 case 9:
                     manageCarsCatalog();
@@ -43,10 +39,10 @@ public class ManageCarsCatalog {
 
             switch (commandNewCarType) {
                 case 1:
-                    addNewRacingCar();
+                    CatalogRacingCars.addNewRacingCar();
                     break;
                 case 2:
-                    addNewCityCar();
+                    CatalogCityCars.addNewCityCar();
                     break;
                 case 9:
                     manageCarsCatalog();
