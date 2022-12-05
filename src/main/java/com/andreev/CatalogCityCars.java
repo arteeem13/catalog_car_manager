@@ -10,9 +10,9 @@ public class CatalogCityCars {
     protected static HashMap<Integer, Integer> capacityCityCar = new HashMap<>();
 
     public static void initCityCarsCatalog() {
-        CityCar cityCarReno = new CityCar(4);
-        CityCar cityCarLada = new CityCar(4);
-        CityCar cityCarSUV = new CityCar(8);
+        CityCar cityCarReno = new CityCar("Reno", 50000, 4);
+        CityCar cityCarLada = new CityCar("Lada", 20000, 4);
+        CityCar cityCarSUV = new CityCar("SUV", 500000, 8);
 
         modelCityCar.put(0, cityCarReno.getModel());
         priceCityCar.put(0, cityCarReno.getPrice());
