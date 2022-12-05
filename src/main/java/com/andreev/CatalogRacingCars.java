@@ -11,9 +11,9 @@ public class CatalogRacingCars {
     protected static HashMap<Integer, Double> maxSpeedRacingCar = new HashMap<>();
 
     public static void initRacingCarsCatalog() {
-        RacingCar racingCarBMW = new RacingCar("BMW", 100000, 300);
-        RacingCar racingCarToyota = new RacingCar("Toyota", 200000, 250);
-        RacingCar racingCarFerrari = new RacingCar("Ferrari", 500000, 400);
+        RacingCar racingCarBMW = new RacingCar(300);
+        RacingCar racingCarToyota = new RacingCar(250);
+        RacingCar racingCarFerrari = new RacingCar(400);
 
         modelRacingCar.put(0, racingCarBMW.getModel());
         priceRacingCar.put(0, racingCarBMW.getPrice());
